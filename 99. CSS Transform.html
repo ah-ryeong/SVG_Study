@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web</title>
+    <style>
+        .box-container {
+            display: flex;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.7);
+            border: 2px solid black;
+        }
+        /* hover : selector is used to select elements when you mouse over them. */
+        .box:hover {
+            /* 크기조정 1이 100%크기임, 소수점도 당연히 가능 */
+            /* scale을 사용하면 자연스럽게 2배로 커지는데 옆에박스는 건드리지 않음 */
+            /* 딱 하나의 박스만 건드리기 연산도 작고 용량도 작아서 좋음  */
+            /* lotate : 회전, 단위 -> deg */
+            /* transform: scale(2) rotate(15deg); */
+
+            /* width, height를 조절하면 옆에 박스를 밀어내고 커짐  */
+            /* width: 200px; */
+            /* height: 200px */
+
+            /* 비틀기 : skew 단위-> deg*/
+            /* 기본이 수평, 수직은 skewY 써주면 됨 */
+            /* 각도 -도 가능 */
+            /* transform: skew(30deg); */
+
+            /* 이동 : translate, 이 역시 축을 따로 쓸 수 있음, 단위 -> px */
+            /* 첫 번째 -> x 축, 두 번째 -> y축, z축도 있음(CSS 3D에서 의미가 있음) */
+            /* transform: translate(30px, 10px); */
+
+            /* 기준점 바꾸기 : transform-origin */
+            /* 방향에 대한 키워드는 숫자값도 left, top도 다 사용가능 */
+            /* 기준점 : 첫번째가 가로 두번째가 세로 */
+            transform: scale(1.5);
+            /* transform-origin: left top; */
+            transform-origin: 30% 80%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 변형에 관련된 것 : 크기 변경, 회전, 위치이동 -->
+    <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusantium soluta libero at beatae nulla voluptas iste, quas eveniet vel numquam, recusandae, corrupti neque magni distinctio obcaecati sint laudantium! Quidem, similique, atque ratione officia quas incidunt pariatur quos explicabo obcaecati eveniet rem voluptatem possimus numquam alias fuga omnis nisi odio deserunt sit autem quis nesciunt molestias aperiam? Optio exercitationem, doloribus eius fugit sit ea asperiores error culpa qui nam voluptas fugiat sequi autem temporibus, amet labore veritatis ratione officiis maxime natus quidem aspernatur praesentium. Ipsum tempora esse maiores asperiores obcaecati nostrum odio magni. Omnis exercitationem eaque quia deleniti labore magni!\
+    </p>
+
+    <div class="box-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse accusamus rerum neque, commodi quisquam hic repellendus eligendi incidunt consequuntur magni aliquid tempore voluptates delectus consectetur sequi sit possimus necessitatibus molestias! Ab nisi dolore fugit suscipit ullam distinctio! Aut nisi rerum itaque. Ab, eligendi enim voluptate error eveniet culpa temporibus reiciendis consequuntur cum eaque harum aut maxime expedita aperiam labore praesentium nostrum? Vero beatae quo ab excepturi minus alias mollitia, amet laborum! Dolore minima laudantium provident molestiae fugiat cupiditate nihil magni ipsum obcaecati excepturi tempora, reprehenderit blanditiis temporibus nemo veritatis iste minus corporis eligendi voluptate explicabo veniam beatae. Rem, sunt itaque.
+    </p>
+</body>
+</html>

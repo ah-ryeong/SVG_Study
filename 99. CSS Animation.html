@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation1</title>
+    <style>
+        /* animation 만들기 */
+        @keyframes sample-ani {
+            0% { /*시작점*/
+            transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(300px, 0);
+                background: red;
+            }
+            100% {
+                transform: translate(400px, 500px);
+            }
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            background: #fff000;
+            /* linear : 등속도로 바꾸기 */
+            /* alternates : 자연스럽게 반복, 반대방향으로 다시 돌아감 */
+            /* animation: sample-ani 3s linear infinite alternate; */
+            /* reverse : 반대로 */
+            /* alternate-reverse : 반대로 자연스럽게 다시 돌아감 */
+            /* animation: sample-ani 3s linear infinite reverse; */
+            /* forwards: 애니메이션이 끝난 시점에 마지막 시점위치로 고정하도록 해줌  */
+            animation: sample-ani 3s linear forwards;
+            /* animation: sample-ani 2s cubic-bezier(0, 0, 0.07, 1.57) infinite; */
+        }
+        .box:hover {
+            /* 마우스를 올리면 pause 되도록 만듬 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    <!-- animation과 transition과 다른점 : keyframe을 추가할 수 있음 -->
+    <!-- 키프레임 : 어떤 object가 이동하다가 방향을 틀거나 할 때 변화가 있는 지점을 keyframe이라고 함 -->
+    <div class="box">BOX</div>
+</body>
+</html>
