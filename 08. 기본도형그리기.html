@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG</title>
+    <style>
+        .shapes {
+            width: 600px;
+            height: 400px;
+            /* 영역확인 */
+            background: #ddd;
+        }
+        rect {
+            fill: orange;
+            /* border */
+            stroke: dodgerblue;
+            /* 단위 생략 가능 */
+            stroke-width: 10;
+        }
+        ellipse {
+            /* 태그 안 보다 css에서 작성한게 우선권이 있음 */
+            /* fill: #fff000; */
+        }
+    </style>
 </head>
 <body>
-    
+    <svg class="shapes">
+        <!-- 사각형 -->
+        <rect x="10" y="20" width="200" height="100" />
+        <!-- 꼭지점이 둥근 사각형 -->
+        <rect x="50" y="170" rx="10" ry="10" width="100" height="100" />
+        <!-- 원 -->
+        <circle cx="350" cy="250" r="30"></circle>
+        <!-- 타원 -->
+        <ellipse cx="200" cy="200" rx="100" ry="50" fill="red" stroke="green" stroke-width="20"></ellipse>
+    </svg>    
 </body>
 </html>
