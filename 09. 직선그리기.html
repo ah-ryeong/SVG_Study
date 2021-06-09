@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shapes {
+            width: 600px;
+            height: 400px;
+            /* 영역확인 */
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes">
+        <line x1="10" x2="400" y1="30" y2="300" stroke="blue"></line>
+        <!-- 직선을 계속 이음 -->
+        <!-- polygon : 마무리를 지어줌, 온전한 다각형 / polyline : 선으로 끝냄  -->
+        <polyline points="0 0 , 200 100, 150 300" stroke="red" stroke-width="10"></polyline>
+        <polygon points="0 0 , 200 100, 150 300" stroke="red" stroke-width="10"></polygon>
+        
+    </svg>
+</body>
+</html>
